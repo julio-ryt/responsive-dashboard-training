@@ -112,6 +112,10 @@ body {
   border-radius: 10px;
 }
 
+.card .card-body .fa-solid {
+  color: #263544;
+}
+
 .card .card-header {
   display: flex;
   justify-content: space-between;
@@ -128,25 +132,39 @@ body {
   grid-row: 3 / 4;
 }
 
-.user button,
-.search button,
-.card button {
-    background-color: #fff;
-    border: none;
-    padding: 20px;
-    width: 40px;
-    height: 40px;
+.search {
+  display: flex;
+  gap: 10px;
+}
+
+.search input {
+  border: 1px solid #282c34;
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user button,
+.search button,
 .card button {
+  background-color: #fff;
+  border: none;
+  padding: 20px;
+  width: 40px;
   display: flex;
+  height: 40px;
   border-radius: 20px;
   align-items: center;
   justify-content: center;
 }
 
 .user button:hover,
+.search button:hover,
 .card button:hover {
   cursor: pointer;
   background-color: #f1f4f6;
@@ -157,7 +175,8 @@ h2,
 h4,
 a,
 p,
-small {
+small,
+.search input {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -254,5 +273,10 @@ nav li a {
 
   .card:last-child {
     grid-area: initial;
+  }
+
+  .card .card-body h2,
+  .card .card-body h4 {
+    font-size: 1em;
   }
 }
