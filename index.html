@@ -33,11 +33,15 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
 
     <script
       src="https://kit.fontawesome.com/8df9994193.js"
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+      defer
     ></script>
   </head>
 
@@ -86,7 +90,7 @@
       </nav>
     </aside>
     <main class="main">
-      <div class="card">
+      <article class="card">
         <div class="card-header">
           <h2>Users</h2>
           <button><i class="fa-solid fa-ellipsis-h"></i></button>
@@ -96,8 +100,8 @@
           <h4>8,200</h4>
           <p>Active Users</p>
         </div>
-      </div>
-      <div class="card">
+      </article>
+      <article class="card">
         <div class="card-header">
           <h2>Products</h2>
           <button><i class="fa-solid fa-ellipsis-h"></i></button>
@@ -107,8 +111,8 @@
           <h4>100,200</h4>
           <p>Active Products</p>
         </div>
-      </div>
-      <div class="card">
+      </article>
+      <article class="card">
         <div class="card-header">
           <h2>Billings</h2>
           <button><i class="fa-solid fa-ellipsis-h"></i></button>
@@ -118,11 +122,14 @@
           <h4>97,200</h4>
           <p>Active Billings</p>
         </div>
-      </div>
-      <div class="card"></div>
+      </article>
+      <article class="card chart-wrapper">
+        <canvas id="acquisitions"></canvas>
+      </article>
     </main>
     <footer class="footer">
       <small>&copy; 2025 All rights reserved</small>
     </footer>
+    <script src="./js/chart.js" defer></script>
   </body>
 </html>
