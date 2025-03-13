@@ -2,19 +2,19 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* 2. Remove default margin */
 * {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-    /* 4. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
 }
 
 /* 5. Improve media defaults */
@@ -23,8 +23,8 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /* 6. Inherit fonts for form controls */
@@ -32,7 +32,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /* 7. Avoid text overflows */
@@ -43,12 +43,12 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* 8. Improve line wrapping */
 p {
-    text-wrap: pretty;
+  text-wrap: pretty;
 }
 
 h1,
@@ -57,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-    text-wrap: balance;
+  text-wrap: balance;
 }
 
 /*
@@ -65,182 +65,194 @@ h6 {
   */
 #root,
 #__next {
-    isolation: isolate;
+  isolation: isolate;
 }
 
 body {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: 60px 1fr 60px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 60px 1fr 60px;
 }
 
 .header {
-    background-color: #fff;
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+  background-color: #fff;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
 .sidebar {
-    background-color: #263544;
-    grid-column: 1 / 2;
-    grid-row: 1 / 4;
+  background-color: #263544;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
 }
 
 .main {
-    background-color: #f1f4f6;
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    display: grid;
-    gap: 20px;
-    padding: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-        "cardUser cardProfile cardBill"
-        "cardLineChart cardLineChart cardLineChart"
-        "cardLineChart cardLineChart cardLineChart";
+  background-color: #f1f4f6;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "cardUser cardProfile cardBill"
+    "cardLineChart cardLineChart cardLineChart"
+    "cardLineChart cardLineChart cardLineChart";
 }
 
 .card {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .card .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
 .card:last-child {
-    grid-area: cardLineChart;
+  grid-area: cardLineChart;
 }
 
 .footer {
-    background-color: #141313;
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
+  background-color: #282c34;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
 }
 
 .user button,
+.search button,
 .card button {
     background-color: #fff;
     border: none;
     padding: 20px;
     width: 40px;
     height: 40px;
-    display: flex;
-    border-radius: 20px;
-    align-items: center;
-    justify-content: center;
+}
+
+.user button,
+.card button {
+  display: flex;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
 .user button:hover,
 .card button:hover {
-    cursor: pointer;
-    background-color: #f1f4f6;
+  cursor: pointer;
+  background-color: #f1f4f6;
+}
+
+h1,
+h2,
+h4,
+a,
+p,
+small {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1,
 a,
 small {
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 nav li {
-    width: 100%;
-
+  width: 100%;
 }
 
 nav li:hover {
-    cursor: pointer;
-    background-color: #202b36;
+  cursor: pointer;
+  background-color: #202b36;
 }
 
 nav li a {
-    text-decoration: none;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .card .card-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .card .card-body i {
-    font-size: 3em;
-    color: #202b36;
+  font-size: 3em;
+  color: #202b36;
 }
 
 .card .card-body p,
 .card .card-body h4 {
-    color: #202b36;
-    font-size: 2em;
+  color: #202b36;
+  font-size: 2em;
 }
 
 .main .card {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (max-width: 1024px) {
-    body {
+  body {
+    grid-template-columns: 1fr;
+  }
 
-        grid-template-columns: 1fr;
+  .header {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
 
-    }
+  .sidebar {
+    position: absolute;
+    width: 100%;
+    display: none;
+  }
 
-    .header {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
-    }
+  .main {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: initial;
+  }
 
-    .sidebar {
-        position: absolute;
-        width: 100%;
-        display: none;
-    }
+  .footer {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
 
-    .main {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: 1fr;
-        grid-template-areas: initial;
-    }
-
-    .footer {
-        grid-column: 1 / 2;
-        grid-row: 3 / 4;
-    }
-
-    .card:last-child {
-        grid-area: initial;
-    }
+  .card:last-child {
+    grid-area: initial;
+  }
 }
