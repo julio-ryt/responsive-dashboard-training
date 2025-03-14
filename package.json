@@ -1,0 +1,17 @@
+{
+  "name": "responsive-dashboard-training",
+  "version": "1.0.0",
+  "author": {
+    "name": "Julio RYT"
+  },
+  "description": "Build a Responsive Dashboard Using CSS Grid & Flex Box",
+  "scripts": {
+    "postcss:watch": "postcss css/styles.css -o dist/style.min.css --watch"
+  },
+  "devDependencies": {
+    "cssnano": "^7.0.6",
+    "postcss": "^8.5.3",
+    "postcss-autoreset": "^3.1.0",
+    "postcss-import": "^16.1.0"
+  }
+}
